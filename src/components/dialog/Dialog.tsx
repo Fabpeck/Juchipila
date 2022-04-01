@@ -28,7 +28,7 @@ class DialogCmp extends React.Component<DialogCmpProps> {
                 <div>
                     {this.props.title}
                 </div>
-                <Icon source={IconSources.FONTAWESOME} name="fa fa-times" onClick={action(() => {
+                <Icon source={IconSources.FONTAWESOME} name="times" onClick={action(() => {
                     this.props.onClose && this.props.onClose();
                     this.props.controller.open = false;
                 })}/>

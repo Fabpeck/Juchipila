@@ -11,6 +11,7 @@ import { TresLechesSession } from './services/TresLechesSession';
 import { Home } from './views/home/Home';
 import { IconSources, Icon } from './components/Icon';
 import { ConverterController, Converter } from './views/Converter/Converter';
+import { KenKenPage } from './views/KenKen/KenKenPage';
 
 var firebaseConfig = {
   apiKey: "AIzaSyC1RR_SpCmX8k0ZADiBezv9l5W51RkIe0I",
@@ -62,7 +63,10 @@ export class LandingView extends React.Component {
             <Registration controller={this.registrationBoxController || new RegistrationController()} />}
         </div>
         <button onClick={() => Converter.displayDialog(this.converterMx)}>
-          <Icon source={IconSources.FONTAWESOME} name="fa fa-calculator"/>
+          <Icon source={IconSources.FONTAWESOME} name="calculator"/>
+        </button>
+        <button onClick={() => KenKenPage.displayDialog()}>
+          <Icon source={IconSources.FONTAWESOME} name="info"/>
         </button>
       </div>
     </div>

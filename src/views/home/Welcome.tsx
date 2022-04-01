@@ -2,8 +2,7 @@ import React from 'react';
 import { Card } from '../../components/panels/Card';
 import './Welcome.css';
 import { EditCookbook, EditCookbookController } from '../cookbooks/EditCookbook';
-import { observable, action, computed } from 'mobx';
-import { Cookbook } from '../../services/TresLechesModels';
+import { action } from 'mobx';
 import { TresLechesSession } from '../../services/TresLechesSession';
 import { observer } from 'mobx-react';
 

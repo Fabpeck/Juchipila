@@ -1,0 +1,32 @@
+.category-items {
+    line-height: 1.43em;
+    display: block;
+    max-width: 100%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 5px 32px;
+}
+
+.category-list .category-wrapper:not(:first-child) {
+    border-top: 1px solid #dadce0;
+}
+
+.category-header {
+    color: #3c4043;
+    line-height: 1.72em;
+    margin: 0 16px;
+    padding: 16px 0;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+}
+
+.category-header i {
+    padding: 5px;
+}
+
+.category-item {
+    width: 100%;
+}

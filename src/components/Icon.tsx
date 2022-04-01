@@ -12,17 +12,26 @@ export interface IconProps {
     className?: string;
     onClick?: () => void;
     tooltip?: string;
+    style?: React.CSSProperties;
+    href?: string;
 }
 
 export class Icon extends React.Component<IconProps> {
     render() {
+        let icon: React.ReactElement;
+        let className = (this.props.className || "") + " icon" + (this.props.onClick ? " clickable" : "")
         switch(this.props.source) {
             case IconSources.FONTAWESOME:
-                return <i title={this.props.tooltip} onClick={this.props.onClick} className={this.props.className + " " + this.props.name}/>;
+                icon = <i title={this.props.tooltip} onClick={this.props.onClick} className={className + " fa fa-" + this.props.name} style={this.props.style}/>;
+                break;
             case IconSources.ASSETS:
-                return <img {...this.props} title={this.props.tooltip} src={require("../assets/images/" + this.props.name + ".png")} alt={this.props.className}/>;
+                let withFileExt = this.props.name.indexOf(".") > -1;
+                icon = <img {...this.props} className={className} onClick={this.props.onClick} title={this.props.tooltip} src={require("../assets/images/" + this.props.name + (withFileExt ? "" : ".png"))} alt={this.props.className}/>;
+                break;
             case IconSources.URL:
-                return <img {...this.props} title={this.props.tooltip} src={require(this.props.name)} alt={this.props.className}/>;
+                icon = <img {...this.props} className={className} onClick={this.props.onClick} title={this.props.tooltip} src={require(this.props.name)} alt={this.props.className}/>;
+                break;
         }
+        return this.props.href ? <a href={this.props.href} target="_blank">{icon}</a> : icon;
     }
 }

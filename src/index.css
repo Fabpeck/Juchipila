@@ -24,7 +24,9 @@ code {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0;  
+  font-size: 1.14em;
+  font-weight: 400;
 }
 
 .AppOverlay {
@@ -32,4 +34,8 @@ code {
   pointer-events: none;
   display: flex;
   justify-content: center;
+}
+
+.icon.clickable:hover {
+  cursor: pointer;
 }

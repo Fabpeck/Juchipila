@@ -1,7 +1,7 @@
 import firebase from "firebase";
 import { TresLechesServices } from "./TresLechesServices";
 import { User, Cookbook } from "./TresLechesModels";
-import { observable, runInAction, action } from "mobx";
+import { observable, action } from "mobx";
 
 export class TresLechesSession {
     private static instance: TresLechesSession;

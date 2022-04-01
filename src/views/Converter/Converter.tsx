@@ -104,7 +104,7 @@ export class ConverterController {
         </div>
         <div className="converter-row-2">
           <div className="converter-column-1">
-            <Icon source={IconSources.FONTAWESOME} name="fa fa-beer"/>
+            <Icon source={IconSources.FONTAWESOME} name="beer"/>
           </div>
           <div className="converter-column-2">
             <TextInput className="number-input" value={this.props.controller.liquidFrom} 
@@ -122,7 +122,7 @@ export class ConverterController {
           </datalist>
         <div className="converter-row-3">
           <div className="converter-column-1">
-            <Icon source={IconSources.FONTAWESOME} name="fa fa-balance-scale"/>
+            <Icon source={IconSources.FONTAWESOME} name="balance-scale"/>
           </div>
           <div className="converter-column-2">
             <TextInput className="number-input" value={this.props.controller.solidFrom} 

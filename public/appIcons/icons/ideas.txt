@@ -1,0 +1,13 @@
+Context for icons:
+
+If small:
+Inventory: Notebook?
+Expired Food: Milk carton
+
+Health warnings: info with heart beat
+Chat: chat bobble
+Cart: cart
+
+If big:
+Inventory: Fridge
+Expired Food: Clock with warning
